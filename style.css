@@ -411,3 +411,149 @@ body.loaded {
         flex-direction: column;
     }
 }
+
+/* ----- Large Screens (Desktops / Large Laptops) ----- */
+@media (min-width: 1200px) {
+    .hero {
+        padding: 60px 150px;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .hero p {
+        font-size: 24px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    nav ul {
+        gap: 40px;
+    }
+}
+
+/* ----- Medium Screens (Tablets, Small Laptops) ----- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 40px 60px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* ----- Small Screens (Mobile Devices) ----- */
+@media (min-width: 480px) and (max-width: 767px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        max-height: 300px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ----- Extra Small Screens (Very Small Phones / Accessibility) ----- */
+@media (max-width: 479px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+    }
+
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-card img {
+        max-height: 200px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
