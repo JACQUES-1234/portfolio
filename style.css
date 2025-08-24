@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-. {
+*. {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -370,190 +370,188 @@ body.loaded {
     }
 }
 
-@media (max-width: 480px) {
-    nav {
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+============================ */
+
+/* ---------- Extra Small Devices (≤ 479px) ---------- */
+@media (max-width: 479px) {
+    nav.me {
+        position: static;
         flex-direction: column;
-        align-items: center;
+        padding: 10px;
+        margin: 0;
     }
 
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .home-content,
-    .about,
-    .services,
-    .projects,
-    .contact {
-        padding: 20px;
-        text-align: center;
-    }
-
-
-
-    .service-cards,
-    .service-card .projects,
-    .project {
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-    .contact form {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-}
-
-/* ----- Large Screens (Desktops / Large Laptops) ----- */
-@media (min-width: 1200px) {
-    .hero {
-        padding: 60px 150px;
-    }
-
-    .hero h1 {
-        font-size: 64px;
-    }
-
-    .hero p {
-        font-size: 24px;
-    }
-
-    .products {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    nav ul {
-        gap: 40px;
-    }
-}
-
-/* ----- Medium Screens (Tablets, Small Laptops) ----- */
-@media (min-width: 768px) and (max-width: 1199px) {
-    header .logo {
-        font-size: 22px;
-    }
-
-    .hero {
-        padding: 40px 60px;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .products {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-}
-
-/* ----- Small Screens (Mobile Devices) ----- */
-@media (min-width: 480px) and (max-width: 767px) {
-    header {
-        text-align: center;
-    }
-
-    nav ul {
+    nav.me ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
 
-    .hero {
-        padding: 30px 20px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .products {
-        grid-template-columns: 1fr;
-    }
-
-    .product-card img {
-        max-height: 300px;
-    }
-
-    form {
-        padding: 20px;
-    }
-
-    .btn {
-        width: 100%;
+    .home-content,
+    .about {
+        flex-direction: column;
+        padding: 30px 15px;
         text-align: center;
     }
-}
 
-/* ----- Extra Small Screens (Very Small Phones / Accessibility) ----- */
-@media (max-width: 479px) {
-    header {
-        padding: 10px;
+    .image-content,
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
-    header .logo {
-        font-size: 18px;
+    .image-content img,
+    .about-image img {
+        max-width: 200px;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-        padding: 0;
-    }
-
-    .hero {
-        padding: 20px 10px;
-    }
-
-    .hero h1 {
+    .home-container h1 {
         font-size: 24px;
     }
 
-    .hero p {
+    .home-container p {
         font-size: 14px;
     }
 
-    .product-card {
-        padding: 15px;
-    }
-
-    .product-card img {
-        max-height: 200px;
-    }
-
-    form {
-        padding: 15px;
-    }
-
-    .btn {
+    .about-content p {
         font-size: 14px;
-        padding: 8px 16px;
+    }
+
+    .service-card,
+    .project img {
         width: 100%;
+        max-width: 100%;
     }
 
-    footer {
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer p {
         font-size: 12px;
-        padding: 10px;
+    }
+}
+
+/* ---------- Small Devices (480px – 767px) ---------- */
+@media (min-width: 480px) and (max-width: 767px) {
+    nav.me {
+        flex-direction: column;
+        margin: 0;
+        padding: 15px;
+    }
+
+    nav.me ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .home-content,
+    .about {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .image-content img,
+    .about-image img {
+        max-width: 220px;
+    }
+
+    .home-container h1 {
+        font-size: 28px;
+    }
+
+    .home-container p {
+        font-size: 16px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project img {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+/* ---------- Medium Devices (768px – 1199px) ---------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    nav.me {
+        left: 0;
+        margin: 0;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .home-content,
+    .about {
+        flex-direction: row;
+        padding: 60px 40px;
+    }
+
+    .image-content img,
+    .about-image img {
+        max-width: 250px;
+    }
+
+    .home-container h1 {
+        font-size: 32px;
+    }
+
+    .home-container p {
+        font-size: 18px;
+    }
+
+    .service-cards {
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 280px;
+    }
+
+    .project img {
+        width: 220px;
+    }
+}
+
+/* ---------- Large Devices (≥ 1200px) ---------- */
+@media (min-width: 1200px) {
+    nav.me {
+        left: 300px;
+        margin: 0 600px;
+        padding: 20px 40px;
+    }
+
+    .home-container h1 {
+        font-size: 40px;
+    }
+
+    .home-container p {
+        font-size: 20px;
+    }
+
+    .about {
+        max-width: 1000px;
+        padding: 80px 60px;
+    }
+
+    .service-card {
+        width: 300px;
+    }
+
+    .project img {
+        width: 250px;
     }
 }
